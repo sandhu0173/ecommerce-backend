@@ -5,91 +5,91 @@
 @section('content')
 <!-- Stats Grid -->
 <div class="stats-grid">
-    <div class="stat-card" style="border-left: 4px solid #3b82f6;">
-        <div style="display: flex; justify-content: space-between; align-items: start;">
-            <div>
+    <div class="stat-card" style="border-left-color: #3b82f6;">
+        <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px;">
+            <div style="flex: 1;">
                 <div class="stat-label"><i class="fas fa-shopping-cart"></i> Total Orders</div>
                 <div class="stat-value">{{ $stats['total_orders'] }}</div>
-                <div class="stat-change" style="color: #10b981;">✓ +12.5% from last month</div>
+                <div class="stat-change"><span style="color: #10b981;"><i class="fas fa-arrow-up"></i> +12.5%</span> from last month</div>
             </div>
-            <div style="font-size: 32px; opacity: 0.2;"><i class="fas fa-shopping-cart"></i></div>
+            <div style="font-size: 24px; opacity: 0.1;"><i class="fas fa-shopping-cart"></i></div>
         </div>
     </div>
 
-    <div class="stat-card" style="border-left: 4px solid #10b981;">
-        <div style="display: flex; justify-content: space-between; align-items: start;">
-            <div>
+    <div class="stat-card" style="border-left-color: #10b981;">
+        <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px;">
+            <div style="flex: 1;">
                 <div class="stat-label"><i class="fas fa-dollar-sign"></i> Total Revenue</div>
                 <div class="stat-value">${{ number_format($stats['total_revenue'], 0) }}</div>
-                <div class="stat-change" style="color: #10b981;">✓ +8.2% from last month</div>
+                <div class="stat-change"><span style="color: #10b981;"><i class="fas fa-arrow-up"></i> +8.2%</span> from last month</div>
             </div>
-            <div style="font-size: 32px; opacity: 0.2;"><i class="fas fa-dollar-sign"></i></div>
+            <div style="font-size: 24px; opacity: 0.1;"><i class="fas fa-dollar-sign"></i></div>
         </div>
     </div>
 
-    <div class="stat-card" style="border-left: 4px solid #f59e0b;">
-        <div style="display: flex; justify-content: space-between; align-items: start;">
-            <div>
+    <div class="stat-card" style="border-left-color: #f59e0b;">
+        <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px;">
+            <div style="flex: 1;">
                 <div class="stat-label"><i class="fas fa-clock"></i> Pending Orders</div>
                 <div class="stat-value">{{ $stats['pending_orders'] }}</div>
-                <div class="stat-change" style="color: #f59e0b;">⚠ Need attention</div>
+                <div class="stat-change"><span style="color: #f59e0b;"><i class="fas fa-exclamation-circle"></i> Attention needed</span></div>
             </div>
-            <div style="font-size: 32px; opacity: 0.2;"><i class="fas fa-clock"></i></div>
+            <div style="font-size: 24px; opacity: 0.1;"><i class="fas fa-clock"></i></div>
         </div>
     </div>
 
-    <div class="stat-card" style="border-left: 4px solid #06b6d4;">
-        <div style="display: flex; justify-content: space-between; align-items: start;">
-            <div>
+    <div class="stat-card" style="border-left-color: #06b6d4;">
+        <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px;">
+            <div style="flex: 1;">
                 <div class="stat-label"><i class="fas fa-truck"></i> Shipped Orders</div>
                 <div class="stat-value">{{ $stats['shipped_orders'] }}</div>
-                <div class="stat-change" style="color: #06b6d4;">📍 In transit</div>
+                <div class="stat-change"><span style="color: #06b6d4;"><i class="fas fa-arrow-right"></i> In transit</span></div>
             </div>
-            <div style="font-size: 32px; opacity: 0.2;"><i class="fas fa-truck"></i></div>
+            <div style="font-size: 24px; opacity: 0.1;"><i class="fas fa-truck"></i></div>
         </div>
     </div>
 
-    <div class="stat-card" style="border-left: 4px solid #8b5cf6;">
-        <div style="display: flex; justify-content: space-between; align-items: start;">
-            <div>
+    <div class="stat-card" style="border-left-color: #8b5cf6;">
+        <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px;">
+            <div style="flex: 1;">
                 <div class="stat-label"><i class="fas fa-cube"></i> Total Products</div>
                 <div class="stat-value">{{ $stats['total_products'] }}</div>
                 <div class="stat-change" style="color: #8b5cf6;">Active products</div>
             </div>
-            <div style="font-size: 32px; opacity: 0.2;"><i class="fas fa-cube"></i></div>
+            <div style="font-size: 24px; opacity: 0.1;"><i class="fas fa-cube"></i></div>
         </div>
     </div>
 
-    <div class="stat-card" style="border-left: 4px solid #ef4444;">
-        <div style="display: flex; justify-content: space-between; align-items: start;">
-            <div>
+    <div class="stat-card" style="border-left-color: #ef4444;">
+        <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px;">
+            <div style="flex: 1;">
                 <div class="stat-label"><i class="fas fa-exclamation-triangle"></i> Low Stock</div>
                 <div class="stat-value">{{ $stats['low_stock'] }}</div>
-                <div class="stat-change" style="color: #ef4444;">🔴 Needs restocking</div>
+                <div class="stat-change"><span style="color: #ef4444;"><i class="fas fa-alert-circle"></i> Restock needed</span></div>
             </div>
-            <div style="font-size: 32px; opacity: 0.2;"><i class="fas fa-exclamation-triangle"></i></div>
+            <div style="font-size: 24px; opacity: 0.1;"><i class="fas fa-exclamation-triangle"></i></div>
         </div>
     </div>
 
-    <div class="stat-card" style="border-left: 4px solid #06b6d4;">
-        <div style="display: flex; justify-content: space-between; align-items: start;">
-            <div>
+    <div class="stat-card" style="border-left-color: #06b6d4;">
+        <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px;">
+            <div style="flex: 1;">
                 <div class="stat-label"><i class="fas fa-users"></i> Total Users</div>
                 <div class="stat-value">{{ $stats['total_users'] }}</div>
                 <div class="stat-change" style="color: #06b6d4;">Active customers</div>
             </div>
-            <div style="font-size: 32px; opacity: 0.2;"><i class="fas fa-users"></i></div>
+            <div style="font-size: 24px; opacity: 0.1;"><i class="fas fa-users"></i></div>
         </div>
     </div>
 
-    <div class="stat-card" style="border-left: 4px solid #3b82f6;">
-        <div style="display: flex; justify-content: space-between; align-items: start;">
-            <div>
+    <div class="stat-card" style="border-left-color: #3b82f6;">
+        <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px;">
+            <div style="flex: 1;">
                 <div class="stat-label"><i class="fas fa-calculator"></i> Avg Order Value</div>
                 <div class="stat-value">${{ number_format($stats['avg_order_value'], 2) }}</div>
                 <div class="stat-change" style="color: #3b82f6;">Per transaction</div>
             </div>
-            <div style="font-size: 32px; opacity: 0.2;"><i class="fas fa-calculator"></i></div>
+            <div style="font-size: 24px; opacity: 0.1;"><i class="fas fa-calculator"></i></div>
         </div>
     </div>
 </div>
