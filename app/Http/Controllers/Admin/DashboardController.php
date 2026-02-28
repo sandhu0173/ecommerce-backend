@@ -33,7 +33,7 @@ class DashboardController extends Controller
 
         // Chart data for revenue by month
         $revenue_raw = Order::where('payment_status', 'paid')
-            ->selectRaw("strftime('%m', created_at) as month, SUM(total) as revenue")
+            ->selectRaw("DATE_FORMAT(created_at, '%m') as month, SUM(total) as revenue")
             ->groupBy('month')
             ->pluck('revenue', 'month')
             ->toArray();
